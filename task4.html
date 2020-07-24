@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task4.css">
+    <title>Document</title>
+</head>
+<body>
+   <center> <input type="text" id="s01" onkeyup="change(this)"></center>
+    <div id="disp"></div>
+</body>
+<script>
+    var str="";
+    var num=0;
+    var arr=["Age","Again","Agree","About","Actor",
+    "Ace","Adamant","After","Afraid",
+    "Bat","Ball","Balloon","Bear","Became","Best","Bike","Bill","Bicycle"]
+    var newarr=[];
+    var k="";
+    var m=""; 
+    function change(ele1)
+    {
+        var table= document.getElementById("disp");
+        newarr=arr.filter(check);
+        function check(n)
+        {var fl=-1;
+            for(var i=0;i<ele1.value.length;i++)
+            {
+                if(n[i]!=ele1.value[i])
+                {
+                    fl=1;
+                }
+                
+            }
+            if(fl==-1)
+            {  m=m+n+"<br>"
+               return true;
+            }
+            else
+            {
+            
+                return false;
+            }
+        }
+        var k="<div> Numbers of words starting with "+ele1.value+" is "+newarr.length+"</div>";
+       k=k+"<br>"+m;
+        table.innerHTML=k;
+        m="";
+       
+        
+
+    }
+</script>
+</html>

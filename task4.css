@@ -1,0 +1,20 @@
+body
+{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url("css13.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+div
+{
+    color:white;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+input
+{
+    margin-top: 20px;
+}
